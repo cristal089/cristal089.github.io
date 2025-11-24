@@ -4,4 +4,7 @@
 <img src="https://github.com/cristal089/portfolio/blob/main/assets/images/spritesheets/floresta_dos_animais.png"> 
 </h1>
 
-Template made with AI, edited by me.
+access the portfolio here: https://cristal089.github.io/portfolio/
+
+template made with AI, edited by me.
+
