@@ -295,7 +295,7 @@ section {
 
 .portfolio-image {
     position: relative;
-    background: var(--bg-white);
+    background: #dddddd;
     border: 5px solid #FFF;
     overflow: hidden;
     cursor: pointer;

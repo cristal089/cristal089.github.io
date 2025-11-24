@@ -206,10 +206,3 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-// ============================================
-// CONSOLE MESSAGE (Easter Egg)
-// ============================================
-console.log('%c🎮 PIXEL ART PORTFOLIO 🎮', 'color: #E52521; font-size: 20px; font-weight: bold;');
-console.log('%cDesenvolvido com ❤️ e pixels!', 'color: #5C94FC; font-size: 14px;');
-console.log('%cVocê pode ver o código-fonte em: https://github.com/seu-usuario/portfolio', 'color: #39B54A; font-size: 12px;');
-
