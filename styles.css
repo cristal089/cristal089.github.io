@@ -1,0 +1,617 @@
+/* ============================================
+   VARIÁVEIS CSS - PALETA ROSA E ROXO VIBRANTE
+   ============================================ */
+:root {
+    /* Cores principais - Rosa e Roxo Vibrantes */
+    --mario-red: #FF5555;
+    --mario-blue: #C1E59F;
+    --mario-yellow: #FF937E;
+    --mario-green: #A3D78A;
+    --mario-orange: #EC4899;
+    --mario-purple: #FF937E;
+    --mario-pink: #FF69B4;
+    
+    /* Cores de fundo - Verde Suave */
+    --bg-light: #E8F5E9;
+    --bg-green: #C8E6C9;
+    --bg-white: #FFF8E7;
+    
+    /* Cores de texto */
+    --text-dark: #5A5A5A;
+    --text-medium: #6A6A6A;
+    --text-light: #7F8C8D;
+    
+    /* Cores de borda e sombra */
+    --border-color: #A5D6A7;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --shadow-strong: rgba(0, 0, 0, 0.2);
+    
+    /* Fontes */
+    --font-pixel: 'VT323', monospace;
+    --font-body: 'VT323', monospace;
+    
+    /* Espaçamentos */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 2rem;
+    --spacing-lg: 3rem;
+    --spacing-xl: 4rem;
+    
+    /* Transições */
+    --transition-fast: 0.2s ease;
+    --transition-normal: 0.3s ease;
+    --transition-slow: 0.5s ease;
+}
+
+/* ============================================
+   RESET E BASE
+   ============================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-body);
+    background: var(--bg-light);
+    color: var(--text-dark);
+    line-height: 1.8;
+    overflow-x: hidden;
+    font-size: 1.25rem;
+    letter-spacing: 0.5px;
+}
+
+/* ============================================
+   TIPOGRAFIA PIXEL ART
+   ============================================ */
+.pixel-text {
+    font-family: var(--font-pixel);
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 1.6;
+}
+
+.pixel-text-large {
+    font-family: var(--font-pixel);
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+    .pixel-text {
+        font-size: 0.7rem;
+    }
+    .pixel-text-large {
+        font-size: 0.7rem;
+    }
+}
+
+/* ============================================
+   HEADER
+   ============================================ */
+.header {
+    background: var(--bg-white);
+    border-bottom: 4px solid var(--mario-red);
+    box-shadow: 0 4px 8px var(--shadow-color);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: var(--spacing-sm) 0;
+}
+
+.header .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo h1 {
+    color: var(--mario-red);
+    margin-bottom: var(--spacing-xs);
+    font-size: 2.5rem;
+}
+
+.logo .subtitle {
+    color: var(--text-medium);
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.nav {
+    display: flex;
+    gap: var(--spacing-md);
+    flex-wrap: wrap;
+}
+
+.nav-link {
+    color: var(--text-dark);
+    text-decoration: none;
+    font-weight: 600;
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border: 2px solid transparent;
+    transition: var(--transition-fast);
+    position: relative;
+    font-size: 1.25rem;
+}
+
+.nav-link:hover {
+    color: var(--mario-blue);
+    border-bottom: 2px solid var(--mario-blue);
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--mario-blue);
+    transition: var(--transition-normal);
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* ============================================
+   BOTÕES
+   ============================================ */
+.btn {
+    display: inline-block;
+    padding: var(--spacing-sm) var(--spacing-md);
+    text-decoration: none;
+    font-weight: 700;
+    border: 3px solid;
+    transition: var(--transition-normal);
+    cursor: pointer;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-primary {
+    background: var(--mario-red);
+    color: var(--bg-white);
+    border-color: var(--mario-red);
+    box-shadow: 0 4px 0 #C2185B;
+}
+
+.btn-primary:hover {
+    background: #E91E63;
+    transform: translateY(2px);
+    box-shadow: 0 2px 0 #C2185B;
+}
+
+.btn-secondary {
+    background: var(--mario-blue);
+    color: var(--bg-white);
+    border-color: var(--mario-blue);
+    box-shadow: 0 4px 0 #7C3AED;
+}
+
+.btn-secondary:hover {
+    background: #A855F7;
+    transform: translateY(2px);
+    box-shadow: 0 2px 0 #7C3AED;
+}
+
+/* ============================================
+   SEÇÕES GERAIS
+   ============================================ */
+section {
+    padding: var(--spacing-xl) var(--spacing-md);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title {
+    text-align: center;
+    color: var(--mario-red);
+    margin-bottom: var(--spacing-lg);
+    font-size: 2.5rem;
+}
+
+.text-large {
+    font-size: 1.25rem;
+    line-height: 1.8;
+    margin-bottom: var(--spacing-sm);
+}
+
+/* ============================================
+   SEÇÃO PORTFÓLIO
+   ============================================ */
+.portfolio {
+    background: var(--bg-green);
+}
+
+.portfolio-filters {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-lg);
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: var(--spacing-xs) var(--spacing-md);
+    background: var(--bg-white);
+    border: 3px solid var(--mario-purple);
+    color: var(--text-dark);
+    font-family: var(--font-pixel);
+    font-weight: 400;
+    cursor: pointer;
+    transition: var(--transition-normal);
+    font-size: 1.25rem;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background: var(--mario-purple);
+    color: var(--bg-white);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px var(--shadow-strong);
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: var(--spacing-md);
+}
+
+.portfolio-item {
+    opacity: 1;
+    transition: var(--transition-normal);
+}
+
+.portfolio-item.hidden {
+    display: none;
+}
+
+.item-large {
+    grid-column: 1 / -1;
+}
+
+.item-large .portfolio-image img {
+    height: 250px;
+}
+
+.portfolio-image {
+    position: relative;
+    background: var(--bg-white);
+    border: 5px solid #FFF;
+    overflow: hidden;
+    cursor: pointer;
+    transition: var(--transition-normal);
+}
+
+.portfolio-image:hover {
+    transform: translateY(-8px) scale(1.02);
+    border-color: var(--mario-yellow);
+}
+
+.portfolio-image img {
+    width: 100%;
+    height: 250px;
+    object-fit: contain;
+    object-position: center;
+    background: #deded157;
+    display: block;
+}
+
+.pixel-art-placeholder-small {
+    width: 100%;
+    height: 250px;
+    background: var(--bg-green);
+    position: relative;
+    overflow: hidden;
+}
+
+.pixel-pattern {
+    width: 100%;
+    height: 100%;
+    background-size: 16px 16px;
+}
+
+.portfolio-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+    color: var(--bg-white);
+    padding: var(--spacing-md);
+    transform: translateY(100%);
+    transition: var(--transition-normal);
+}
+
+.portfolio-image:hover .portfolio-overlay {
+    transform: translateY(0);
+}
+
+.portfolio-overlay h3 {
+    font-family: var(--font-pixel);
+    font-size: 1.5rem;
+    margin-bottom: -5px;
+    color: var(--mario-yellow);
+}
+
+.portfolio-overlay p {
+    font-size: 1rem;
+}
+
+/* ============================================
+   SEÇÃO SOBRE
+   ============================================ */
+   .sobre {
+    background: var(--bg-white);
+}
+
+.sobre-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.sobre-content p {
+    margin-bottom: var(--spacing-md);
+    line-height: 1.8;
+}
+
+.social-intro {
+    margin-top: var(--spacing-md);
+    margin-bottom: var(--spacing-sm);
+    font-weight: 500;
+}
+
+.skills-title {
+    font-family: var(--font-pixel);
+    color: var(--mario-green);
+    margin-top: var(--spacing-md);
+    margin-bottom: var(--spacing-sm);
+    font-size: 0.6rem;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--spacing-sm);
+}
+
+.skill-item {
+    display: flex;
+    align-items: center;
+    padding: var(--spacing-xs);
+    background: var(--bg-white);
+    border: 2px solid #66BB6A;
+    font-weight: 500;
+    font-size: 0.75rem;
+}
+
+/* ============================================
+   LINKS SOCIAIS
+   ============================================ */
+.social-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-sm);
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 500;
+    transition: var(--transition-normal);
+    font-size: 1.25rem;
+}
+
+.social-link:hover {
+    color: var(--mario-blue);
+}
+
+.social-icon {
+    font-size: 1.2rem;
+}
+
+/* ============================================
+   MODAL DE IMAGEM
+   ============================================ */
+.image-modal {
+    display: none;
+    position: fixed;
+    z-index: 10000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    animation: fadeIn 0.3s ease;
+}
+
+.image-modal.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+    border: 5px solid #FFF;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+    animation: zoomIn 0.3s ease;
+}
+
+.modal-close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: var(--bg-white);
+    font-size: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: var(--transition-fast);
+    z-index: 10001;
+    line-height: 1;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(255, 0, 0, 0.3);
+}
+
+.modal-close:hover {
+    background: rgba(255, 0, 0, 0.6);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* ============================================
+   RESPONSIVIDADE
+   ============================================ */
+@media (max-width: 768px) {
+    .hero-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .hero-image {
+        order: -1;
+    }
+    
+    .pixel-art-placeholder {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .nav {
+        margin-top: var(--spacing-sm);
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .header .container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    section {
+        padding: var(--spacing-md) var(--spacing-sm);
+    }
+    
+    .hero {
+        min-height: 70vh;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+    }
+    
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .portfolio-item[data-category="environments"] .portfolio-image img {
+        height: 250px;
+    }
+    
+    .modal-content {
+        max-width: 95%;
+        max-height: 85%;
+    }
+    
+    .modal-close {
+        top: 10px;
+        right: 15px;
+        font-size: 30px;
+        width: 40px;
+        height: 40px;
+    }
+}
+
+/* ============================================
+   ANIMAÇÕES EXTRAS
+   ============================================ */
+@keyframes pixel-fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.portfolio-item {
+    animation: pixel-fade-in 0.6s ease-out;
+}
+
+/* Efeito de scanlines retrô */
+body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.03) 0px,
+        rgba(0, 0, 0, 0.03) 1px,
+        transparent 1px,
+        transparent 2px
+    );
+    pointer-events: none;
+    z-index: 9999;
+    mix-blend-mode: overlay;
+}
+
