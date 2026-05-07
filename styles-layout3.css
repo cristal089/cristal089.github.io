@@ -1,0 +1,257 @@
+/* ============================================
+   VARIÁVEIS CSS - PALETA ROSA E ROXO VIBRANTE
+   ============================================ */
+:root {
+    /* Cores principais - Rosa e Roxo Vibrantes */
+    --mario-red: #FF5555;
+    --mario-blue: #C1E59F;
+    --mario-yellow: #FF937E;
+    --mario-green: #80cc70;
+    --mario-orange: #EC4899;
+    --mario-purple: #FF937E;
+    --mario-pink: #FF69B4;
+    
+    /* Cores de fundo - Verde Suave */
+    --bg-light: #E8F5E9;
+    --bg-green: #C8E6C9;
+    --bg-white: #FEFEFE;
+    
+    /* Cores de texto */
+    --text-dark: #5A5A5A;
+    --text-medium: #6A6A6A;
+    --text-light: #7F8C8D;
+    
+    /* Cores de borda e sombra */
+    --border-color: #A5D6A7;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --shadow-strong: rgba(0, 0, 0, 0.2);
+    
+    /* Fontes */
+    --font-pixel: 'VT323', monospace;
+    --font-body: 'VT323', monospace;
+    
+    /* Espaçamentos */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 2rem;
+    --spacing-lg: 3rem;
+    --spacing-xl: 4rem;
+    
+    /* Transições */
+    --transition-fast: 0.2s ease;
+    --transition-normal: 0.3s ease;
+    --transition-slow: 0.5s ease;
+}
+
+/* ============================================
+   RESET E BASE
+   ============================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--text-dark);
+    line-height: 1.8;
+    overflow-x: hidden;
+    font-size: 1.25rem;
+    letter-spacing: 0.5px;
+}
+
+.top-border {
+    width: 100%;
+    min-height: 200px;
+    border: none;
+    background:
+    radial-gradient(40px at bottom,rgb(154, 194, 255) 98%, rgba(201, 240, 255, 1)) 50% / 74.00px 100%;
+}
+
+.layout-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 1rem;
+    padding: 0 2rem;
+    background: rgb(154, 194, 255);
+    box-shadow: 2px 4px 3px rgb(75, 75, 75);
+}
+
+/* ============================================
+   TIPOGRAFIA PIXEL ART
+   ============================================ */
+.pixel-text {
+    font-family: var(--font-pixel);
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 1.6;
+}
+
+.pixel-text-large {
+    font-family: var(--font-pixel);
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+    .pixel-text {
+        font-size: 0.7rem;
+    }
+    .pixel-text-large {
+        font-size: 0.7rem;
+    }
+}
+
+/* ============================================
+   HEADER
+   ============================================ */
+
+.header {
+    border-right: 3px dotted gray;
+}
+
+.header .container {
+    max-height: 1200px;
+    min-width: 100px;
+    margin: 0 auto;
+    padding-top: 2rem;
+    padding-right: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 1rem;
+    max-height: 150px;
+    margin-bottom: 3rem;
+    padding: 2rem 3rem 0 3rem;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    line-height: 2rem;
+}
+
+.logo img {
+    max-height: 100px;
+}
+
+.logo h1 {
+    font-size: 2.5rem;
+}
+
+.logo .subtitle {
+    color: var(--text-medium);
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+    line-height: 3rem;
+    padding: 0.5rem 2rem 0 1rem;
+}
+
+.nav-link {
+    color: var(--text-dark);
+    text-decoration: none;
+    font-weight: 600;
+    padding: 1rem;
+    padding-left: 0;
+    font-size: 1.25rem;
+}
+
+.nav-link:hover {
+    cursor: pointer;
+}
+
+/* ============================================
+   SEÇÕES GERAIS
+   ============================================ */
+section {
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title {
+    text-align: center;
+    color: var(--mario-red);
+    margin-bottom: var(--spacing-lg);
+    font-size: 2.5rem;
+}
+
+.text-large {
+    font-size: 1.25rem;
+    line-height: 1.8;
+    margin-bottom: var(--spacing-sm);
+}
+
+/* ============================================
+   SEÇÃO PORTFÓLIO
+   ============================================ */
+.portfolio {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 0 3rem;
+}
+
+.welcome {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 5rem;
+}
+
+.welcome img {
+    max-width: 500px;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: var(--spacing-md);
+}
+
+.portfolio-grid img {
+    width: 100%;
+    height: 250px;
+    object-fit: contain;
+    object-position: center;
+    display: block;
+}
+
+.footer {
+    max-width: 95%;
+    margin: 0 120px 100px 120px;
+    padding: 0 2rem;
+    background: rgb(233, 233, 233);
+    box-shadow: 2px 4px 3px rgb(75, 75, 75);
+}
