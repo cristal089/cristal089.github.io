@@ -1,0 +1,334 @@
+/* ============================================
+   VARIÁVEIS CSS - PALETA ROSA E ROXO VIBRANTE
+   ============================================ */
+:root {
+    /* Cores principais - Rosa e Roxo Vibrantes */
+    --mario-red: #FF5555;
+    --mario-blue: #C1E59F;
+    --mario-yellow: #FF937E;
+    --mario-green: #80cc70;
+    --mario-orange: #EC4899;
+    --mario-purple: #FF937E;
+    --mario-pink: #FF69B4;
+    
+    /* Cores de fundo - Verde Suave */
+    --bg-light: #E8F5E9;
+    --bg-green: #C8E6C9;
+    --bg-white: #FEFEFE;
+    
+    /* Cores de texto */
+    --text-dark: #5A5A5A;
+    --text-medium: #6A6A6A;
+    --text-light: #7F8C8D;
+    
+    /* Cores de borda e sombra */
+    --border-color: #A5D6A7;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --shadow-strong: rgba(0, 0, 0, 0.2);
+    
+    /* Fontes */
+    --font-pixel: 'VT323', monospace;
+    --font-body: 'VT323', monospace;
+    
+    /* Espaçamentos */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 2rem;
+    --spacing-lg: 3rem;
+    --spacing-xl: 4rem;
+    
+    /* Transições */
+    --transition-fast: 0.2s ease;
+    --transition-normal: 0.3s ease;
+    --transition-slow: 0.5s ease;
+}
+
+/* ============================================
+   RESET E BASE
+   ============================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-body);
+    background: #edfbff;
+    background: linear-gradient(180deg,rgba(237, 251, 255, 1) 0%, rgba(201, 240, 255, 1) 100%);
+    color: var(--text-dark);
+    line-height: 1.8;
+    overflow-x: hidden;
+    font-size: 1.25rem;
+    letter-spacing: 0.5px;
+}
+
+.layout-wrapper {
+    max-width: 95%;
+    margin: 0 120px 20px 120px;
+    padding-bottom: 2rem;
+    border-radius: 0 0 10px 10px;
+    background: rgb(93, 136, 228);
+}
+
+/* ============================================
+   TIPOGRAFIA PIXEL ART
+   ============================================ */
+.pixel-text {
+    font-family: var(--font-pixel);
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 1.6;
+}
+
+.pixel-text-large {
+    font-family: var(--font-pixel);
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+    .pixel-text {
+        font-size: 0.7rem;
+    }
+    .pixel-text-large {
+        font-size: 0.7rem;
+    }
+}
+
+/* ============================================
+   HEADER
+   ============================================ */
+.header {  
+    /* position: sticky; */
+    top: 0;
+    z-index: 1000;
+    padding: var(--spacing-sm) 0;
+}
+
+.header .container {
+    max-width: 1200px;
+    min-height: 100px;
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.logo {
+    max-height: 150px;
+}
+
+.logo img {
+    max-height: 150px;
+    position: absolute;
+    z-index: 10;
+    top: -10px;
+}
+
+.logo h1 {
+    color: var(--mario-red);
+    margin-bottom: var(--spacing-xs);
+    font-size: 2.5rem;
+}
+
+.logo .subtitle {
+    color: var(--text-medium);
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    gap: var(--spacing-md);
+    flex-wrap: wrap;
+    background-color:rgb(154, 194, 255);
+    line-height: 1rem;
+    padding: 0 1rem;
+    border-radius: 10px;
+}
+
+.nav-link {
+    color: var(--text-dark);
+    text-decoration: none;
+    font-weight: 600;
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border: 2px solid transparent;
+    transition: var(--transition-fast);
+    position: relative;
+    font-size: 1.25rem;
+}
+
+.nav-link:hover {
+    color: var(--mario-red);
+    border-bottom: 2px solid var(--mario-red);
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--mario-red);
+    transition: var(--transition-normal);
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* ============================================
+   BOTÕES
+   ============================================ */
+.btn {
+    display: inline-block;
+    padding: var(--spacing-sm) var(--spacing-md);
+    text-decoration: none;
+    font-weight: 700;
+    border: 3px solid;
+    transition: var(--transition-normal);
+    cursor: pointer;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-primary {
+    background: var(--mario-red);
+    color: var(--bg-white);
+    border-color: var(--mario-red);
+    box-shadow: 0 4px 0 #C2185B;
+}
+
+.btn-primary:hover {
+    background: #E91E63;
+    transform: translateY(2px);
+    box-shadow: 0 2px 0 #C2185B;
+}
+
+.btn-secondary {
+    background: var(--mario-red);
+    color: var(--bg-white);
+    border-color: var(--mario-red);
+    box-shadow: 0 4px 0 #7C3AED;
+}
+
+.btn-secondary:hover {
+    background: #A855F7;
+    transform: translateY(2px);
+    box-shadow: 0 2px 0 #7C3AED;
+}
+
+/* ============================================
+   SEÇÕES GERAIS
+   ============================================ */
+section {
+    padding: 2rem;
+    margin: 0 6rem 2rem 6rem;
+    border-radius: 10px;
+    background: var(--bg-white);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title {
+    text-align: center;
+    color: var(--mario-red);
+    margin-bottom: var(--spacing-lg);
+    font-size: 2.5rem;
+}
+
+.text-large {
+    font-size: 1.25rem;
+    line-height: 1.8;
+    margin-bottom: var(--spacing-sm);
+}
+
+/* ============================================
+   SEÇÃO PORTFÓLIO
+   ============================================ */
+.portfolio {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.welcome {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 5rem;
+
+    background-color:rgb(154, 194, 255);
+    padding: 3rem 2rem;
+    border-radius: 5px;
+}
+
+.welcome img {
+    max-width: 500px;
+    border-radius: 10px;
+}
+
+.portfolio-projects {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1rem;
+
+    border-radius: 5px;
+}
+
+.project-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2rem;
+    align-items: center;
+    padding-bottom: 2rem;
+    width: 530px;
+    background-color: rgb(154, 194, 255);
+    border-radius: 5px;
+}
+
+.project-item h3 {
+    min-width: 100%;
+    text-align: center;
+    background-color: rgb(154, 223, 255);
+    border-radius: 5px 5px 0px 0px;
+}
+
+.project-item p {
+    padding: 0 1.5rem;
+}
+
+.project-item img {
+    max-width: 90%;
+    border-radius: 10px;
+}
+
+.footer {
+    margin: 0 6rem 0 6rem;
+    border-radius: 5px;
+    background: rgb(109, 148, 231);
+    color: white;
+}
+
