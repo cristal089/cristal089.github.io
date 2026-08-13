@@ -121,7 +121,7 @@ body {
 
 .header .container {
     max-height: 1200px;
-    min-width: 100px;
+    min-width: 200px;
     margin: 0 auto;
     padding-top: 2rem;
     padding-right: 2rem;
