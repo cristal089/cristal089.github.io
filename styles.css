@@ -3,17 +3,17 @@
    ============================================ */
 :root {
     /* Cores principais - Rosa e Roxo Vibrantes */
-    --mario-red: #FF5555;
-    --mario-blue: #C1E59F;
-    --mario-yellow: #FF937E;
-    --mario-green: #80cc70;
-    --mario-orange: #EC4899;
-    --mario-purple: #FF937E;
-    --mario-pink: #FF69B4;
+    --mario-red: #7eb2ff;
+    --mario-blue: #ccf1fa;
+    --mario-yellow: #7eb2ff;
+    --mario-green: #ccf1fa;
+    --mario-orange: #7eb2ff;
+    --mario-purple: #7eb2ff;
+    --mario-pink: #7eb2ff;
     
     /* Cores de fundo - Verde Suave */
-    --bg-light: #E8F5E9;
-    --bg-green: #C8E6C9;
+    --bg-light: #ccf1fa;
+    --bg-green: #ccf1fa;
     --bg-white: #FEFEFE;
     
     /* Cores de texto */
@@ -223,7 +223,7 @@ section {
 }
 
 .section-title {
-    text-align: center;
+    text-align: left;
     color: var(--mario-red);
     margin-bottom: var(--spacing-lg);
     font-size: 2.5rem;
@@ -296,7 +296,7 @@ section {
 .portfolio-image {
     position: relative;
     background: #F6F6F6;
-    border: 5px solid #dbdbdb;
+    border: 5px solid #e7e6e6;
     overflow: hidden;
     cursor: pointer;
     transition: var(--transition-normal);
@@ -312,7 +312,7 @@ section {
     height: 250px;
     object-fit: contain;
     object-position: center;
-    background: #deded157;
+    background: #cacac4bb;
     display: block;
 }
 
@@ -335,7 +335,7 @@ section {
     bottom: 0;
     left: 0;
     right: 0;
-    background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+    background: linear-gradient(to top, rgba(0,0,0,1), transparent);
     color: var(--bg-white);
     padding: var(--spacing-md);
     transform: translateY(100%);
@@ -360,13 +360,26 @@ section {
 /* ============================================
    SEÇÃO SOBRE
    ============================================ */
-   .sobre {
+.sobre {
     background: var(--bg-light);
 }
 
 .sobre-content {
     max-width: 1200px;
     margin: 0 auto;
+}
+
+.section-title {
+    align-self: flex-start;
+}
+
+.sobre-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.sobre-paragraph {
+    max-width: 600px;
 }
 
 .sobre-content p {
